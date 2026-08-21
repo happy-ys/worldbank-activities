@@ -21,8 +21,7 @@
     display:flex;align-items:center;justify-content:center;padding:24px}
   .wrap{width:100%;max-width:920px;position:relative}
 
-  header{display:flex;align-items:baseline;gap:16px;margin-bottom:28px}
-  h1{font-size:26px;font-weight:700;letter-spacing:-.02em;margin:0}
+  header{display:flex;align-items:baseline;margin-bottom:20px}
   .count{margin-left:auto;font-size:15px;font-weight:600;color:var(--ink-soft);
     font-variant-numeric:tabular-nums}
 
@@ -70,14 +69,13 @@
   :focus-visible{outline:3px solid var(--base);outline-offset:3px;border-radius:12px}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
   @media(max-width:640px){
-    .row{gap:10px}.word span{font-size:22px}h1{font-size:20px}
+    .row{gap:10px}.word span{font-size:22px}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>Match the season and the picture.</h1>
     <div class="count"><span id="n">0</span> / 4</div>
   </header>
 

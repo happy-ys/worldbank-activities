@@ -20,8 +20,7 @@
     display:flex;align-items:center;justify-content:center;padding:24px}
   .wrap{width:100%;max-width:660px;text-align:center}
 
-  header{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
-  h1{font-size:24px;font-weight:700;letter-spacing:-.02em;margin:0}
+  header{display:flex;align-items:baseline;margin-bottom:4px}
   .count{margin-left:auto;font-size:15px;font-weight:600;color:var(--ink-soft);
     font-variant-numeric:tabular-nums}
 
@@ -71,14 +70,13 @@
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
   @media(max-width:560px){
     .slot{width:34px;font-size:32px}.tile{width:46px;height:46px;font-size:21px}
-    h1{font-size:19px}.stage svg{height:100px}
+    .stage svg{height:100px}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>Spell the word.</h1>
     <div class="count"><span id="n">1</span> / 6</div>
   </header>
   <div class="dots" id="dots"></div>
