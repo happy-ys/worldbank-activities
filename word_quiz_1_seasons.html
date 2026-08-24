@@ -18,24 +18,24 @@
     --font:'PretendardX',Pretendard,-apple-system,system-ui,sans-serif;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  html,body{margin:0}
-  body{min-height:100%}
+  html,body{margin:0;height:100%}
   body{font-family:var(--font);background:#fff;color:var(--ink);
-    display:flex;align-items:flex-start;justify-content:center;padding:8px 14px 10px}
-  .wrap{width:100%;max-width:704px;position:relative}
+    display:flex;align-items:center;justify-content:center;padding:0}
+    .wrap{width:100%;max-width:1400px;aspect-ratio:745/420;
+    container-type:inline-size;position:relative;overflow:hidden}
 
-  header{display:flex;align-items:baseline;margin-bottom:8px;height:22px}
-  .count{margin-left:auto;font-size:14px;font-weight:600;color:var(--ink-soft);
+  header{display:flex;align-items:baseline;margin-bottom:1.136cqw;height:3.125cqw;padding:1.136cqw 1.989cqw 0}
+  .count{margin-left:auto;font-size:1.989cqw;font-weight:600;color:var(--ink-soft);
     font-variant-numeric:tabular-nums}
 
   svg.wires{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
 
-  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;z-index:1}
-  .row.words{margin-top:26px}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.989cqw;position:relative;z-index:1;padding:0 1.989cqw}
+  .row.words{margin-top:3.693cqw}
 
-  .pic{background:var(--panel);border:2px solid transparent;border-radius:18px;
-    padding:12px 10px 10px;cursor:pointer;transition:.18s;display:flex;
-    align-items:center;justify-content:center;height:226px}
+  .pic{background:var(--panel);border:2px solid transparent;border-radius:2.557cqw;
+    padding:1.705cqw 1.420cqw 1.420cqw;cursor:pointer;transition:.18s;display:flex;
+    align-items:center;justify-content:center;height:32.102cqw}
   .pic svg{width:100%;height:100%}
   .pic:hover{background:#EDF1F6}
   .pic.sel{border-color:var(--base);background:#fff;
@@ -45,16 +45,16 @@
   .word{cursor:pointer;padding:6px 8px 0;position:relative;transition:.18s}
   /* 4선 — Andika 실측 비율 (ascender .781em / x-height .498em / descender .229em)
      Andika는 SIL이 문해력 학습용으로 설계한 서체다. 세 칸이 고르게 나뉜다. */
-  .word .lines{position:relative;height:30px;margin:11px 0 9px}
+  .word .lines{position:relative;height:4.261cqw;margin:1.562cqw 0 1.278cqw}
   .ln{position:absolute;left:0;right:0;height:0}
   .ln.t{top:0;border-top:1.5px solid #9AA3AF}
-  .ln.m{top:8px;border-top:1.5px dashed #C9CFD8}
-  .ln.b{top:23px;border-top:2px solid var(--base)}
-  .ln.x{top:30px;border-top:1.5px solid #9AA3AF}
-  .word span{position:absolute;left:0;right:0;top:-4px;
+  .ln.m{top:1.136cqw;border-top:1.5px dashed #C9CFD8}
+  .ln.b{top:3.267cqw;border-top:2px solid var(--base)}
+  .ln.x{top:4.261cqw;border-top:1.5px solid #9AA3AF}
+  .word span{position:absolute;left:0;right:0;top:-0.568cqw;
     display:block;text-align:center;
     font-family:'Andika',var(--font);
-    font-size:30px;font-weight:400;line-height:1;color:var(--ink)}
+    font-size:4.261cqw;font-weight:400;line-height:1;color:var(--ink)}
   .word:hover span{color:#000}
   .word.done{pointer-events:none}
   .word.done span{color:var(--ok)}
@@ -63,23 +63,18 @@
     20%{transform:translateX(-8px)}40%{transform:translateX(8px)}
     60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
 
-  .done-msg{margin-top:10px;text-align:center;font-size:17px;font-weight:600;
+  .done-msg{margin-top:1.420cqw;text-align:center;font-size:2.415cqw;font-weight:600;
     color:var(--ok);opacity:0;transition:.4s;transform:translateY(6px)}
   .done-msg.show{opacity:1;transform:none}
-  .again{margin-top:6px;display:flex;justify-content:center;height:32px;align-items:center}
-  .again button{font-family:var(--font);font-size:14px;font-weight:600;
+  .again{margin-top:0.852cqw;display:flex;justify-content:center;height:4.545cqw;align-items:center}
+  .again button{font-family:var(--font);font-size:1.989cqw;font-weight:600;
     color:var(--ink);background:var(--panel);border:0;border-radius:999px;
-    padding:8px 20px;cursor:pointer;transition:.18s}
+    padding:1.136cqw 2.841cqw;cursor:pointer;transition:.18s}
   .again button:hover{background:#E6EBF1}
   .again{opacity:0;pointer-events:none;transition:.4s}
   .again.show{opacity:1;pointer-events:auto}
   :focus-visible{outline:3px solid var(--base);outline-offset:3px;border-radius:12px}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-  @media(max-width:640px){
-    .row{gap:9px}.pic{height:150px}
-    .word span{font-size:24px;top:-3px}.word .lines{height:24px}
-    .ln.m{top:7px}.ln.b{top:19px}.ln.x{top:24px}
-  }
 </style>
 </head>
 <body>
